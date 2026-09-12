@@ -1,0 +1,43 @@
+<svg viewBox="0 0 700 260" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="siteTitle siteDesc" font-family="Segoe UI, Arial, sans-serif">
+  <title id="siteTitle">Site map</title>
+  <desc id="siteDesc">Tree diagram showing the home page at the top, linking down to five pages: Broadband and Infrastructure, Mobile Internet Era, Censorship and Social Media Bans, Digital Economy and Freelancing, and References.</desc>
+
+  <rect width="700" height="260" fill="#FFFFFF"/>
+
+  <!-- connecting lines -->
+  <g stroke="#C9D4E0" stroke-width="2">
+    <line x1="350" y1="55" x2="70"  y2="140"/>
+    <line x1="350" y1="55" x2="210" y2="140"/>
+    <line x1="350" y1="55" x2="350" y2="140"/>
+    <line x1="350" y1="55" x2="490" y2="140"/>
+    <line x1="350" y1="55" x2="630" y2="140"/>
+  </g>
+
+  <!-- home node -->
+  <rect x="280" y="20" width="140" height="40" rx="6" fill="#0B1F3A"/>
+  <text x="350" y="45" text-anchor="middle" font-size="13" fill="#FFFFFF">Home / Timeline</text>
+
+  <!-- child nodes -->
+  <g font-size="11" fill="#FFFFFF">
+    <rect x="10"  y="140" width="120" height="46" rx="6" fill="#1C7293"/>
+    <text x="70"  y="160" text-anchor="middle">Broadband &amp;</text>
+    <text x="70"  y="174" text-anchor="middle">Infrastructure</text>
+
+    <rect x="150" y="140" width="120" height="46" rx="6" fill="#1C7293"/>
+    <text x="210" y="160" text-anchor="middle">Mobile Internet</text>
+    <text x="210" y="174" text-anchor="middle">Era</text>
+
+    <rect x="290" y="140" width="120" height="46" rx="6" fill="#1C7293"/>
+    <text x="350" y="160" text-anchor="middle">Censorship &amp;</text>
+    <text x="350" y="174" text-anchor="middle">Social Media Bans</text>
+
+    <rect x="430" y="140" width="120" height="46" rx="6" fill="#1C7293"/>
+    <text x="490" y="160" text-anchor="middle">Digital Economy &amp;</text>
+    <text x="490" y="174" text-anchor="middle">Freelancing</text>
+
+    <rect x="570" y="140" width="120" height="46" rx="6" fill="#00C2CB"/>
+    <text x="630" y="165" text-anchor="middle" fill="#0B1F3A">References</text>
+  </g>
+
+  <text x="350" y="230" text-anchor="middle" font-size="11" fill="#5B6B7C">All 5 content pages share the nav and footer; References is reachable from the footer on every page.</text>
+</svg>

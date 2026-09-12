@@ -1,0 +1,90 @@
+[
+  {
+    "id": "dialup-1993",
+    "year": "1992–1998",
+    "era": "Dial-Up Beginnings",
+    "title": "The First Internet Connections",
+    "summary": "Imran-Net launches Pakistan's first commercial dial-up service; SDNPK begins reliable email access. By 1998, speeds reach 56kbps.",
+    "page": "infrastructure"
+  },
+  {
+    "id": "broadband-2000",
+    "year": "2000–2004",
+    "era": "Broadband Arrives",
+    "title": "Submarine Cables & DSL",
+    "summary": "PTCL brings Pakistan's first submarine cable (SEA-ME-WE-3) online; DSL broadband launches in 2002; the 2004 De-regulation Policy opens the market.",
+    "page": "infrastructure"
+  },
+  {
+    "id": "facebook-ban-2010",
+    "year": "2010",
+    "era": "First Major Ban",
+    "title": "Facebook & YouTube Blocked",
+    "summary": "Facebook, YouTube, Wikipedia, and Flickr are banned over a controversial page, lifted after roughly a week.",
+    "page": "censorship"
+  },
+  {
+    "id": "youtube-ban-2012",
+    "year": "2012–2016",
+    "era": "The Long YouTube Ban",
+    "title": "Three Years Offline",
+    "summary": "YouTube is blocked nationwide alongside ~20,000 other sites after the 'Innocence of Muslims' film; access is restored in January 2016.",
+    "page": "censorship"
+  },
+  {
+    "id": "3g4g-2014",
+    "year": "2014",
+    "era": "Mobile Internet Era",
+    "title": "3G/4G Auction",
+    "summary": "Pakistan's first spectrum auction raises $1.1 billion; Zong, Mobilink, Telenor, and Ufone launch 3G/4G services nationwide.",
+    "page": "mobile"
+  },
+  {
+    "id": "peca-2016",
+    "year": "2016",
+    "era": "Legal Framework",
+    "title": "PECA Enacted",
+    "summary": "The Prevention of Electronic Crimes Act gives the PTA formal legal power to block and remove online content.",
+    "page": "censorship"
+  },
+  {
+    "id": "digital-policy-2018",
+    "year": "2018",
+    "era": "Digital Economy Push",
+    "title": "Digital Pakistan Policy",
+    "summary": "Government policy targets a $20 billion ICT industry by 2025, laying groundwork for the freelancing and startup boom.",
+    "page": "economy"
+  },
+  {
+    "id": "5g-test-2019",
+    "year": "2019",
+    "era": "Looking Ahead",
+    "title": "First 5G Tests in South Asia",
+    "summary": "Pakistan becomes the first South Asian country to test 5G mobile network services.",
+    "page": "mobile"
+  },
+  {
+    "id": "tiktok-2020",
+    "year": "2020",
+    "era": "Platform-Specific Bans",
+    "title": "TikTok Banned",
+    "summary": "TikTok is banned nationwide over 'immoral content', part of a wider pattern of platform-specific restrictions.",
+    "page": "censorship"
+  },
+  {
+    "id": "election-shutdown-2024",
+    "year": "2024",
+    "era": "Election Day Shutdown",
+    "title": "Nationwide Internet Blackout",
+    "summary": "Mobile internet and phone services are suspended nationwide on general election day; X (Twitter) is banned days later.",
+    "page": "censorship"
+  },
+  {
+    "id": "freelance-growth-2024",
+    "year": "2023–2024",
+    "era": "Freelance Economy Peak",
+    "title": "$3.2 Billion in IT Exports",
+    "summary": "IT and IT-enabled services exports cross $3.2 billion in FY2023-24, with Pakistan ranking among the world's top 5 freelancing markets.",
+    "page": "economy"
+  }
+]

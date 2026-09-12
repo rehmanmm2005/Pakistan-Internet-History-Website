@@ -1,0 +1,37 @@
+<svg viewBox="0 0 400 220" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Submarine cable landing infrastructure</title>
+  <desc id="desc">Stylised illustration of a coastline with a landing station connected to a submarine cable running out under wave patterns to the sea.</desc>
+  <defs>
+    <linearGradient id="skyGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1C7293"/>
+      <stop offset="100%" stop-color="#0B1F3A"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="220" fill="url(#skyGrad)"/>
+
+  <!-- land -->
+  <path d="M0,140 Q60,120 130,135 T260,130 L260,0 L0,0 Z" fill="#0B1F3A" opacity="0.35"/>
+
+  <!-- landing station building -->
+  <g transform="translate(60,95)">
+    <rect x="0" y="10" width="46" height="35" fill="#F5F7FA"/>
+    <rect x="6" y="18" width="10" height="10" fill="#0B1F3A"/>
+    <rect x="20" y="18" width="10" height="10" fill="#0B1F3A"/>
+    <rect x="34" y="18" width="8" height="10" fill="#0B1F3A"/>
+    <rect x="-4" y="0" width="54" height="10" fill="#00C2CB"/>
+    <line x1="23" y1="0" x2="23" y2="-18" stroke="#F5F7FA" stroke-width="2"/>
+    <circle cx="23" cy="-20" r="3" fill="#00C2CB"/>
+  </g>
+
+  <!-- cable running from station down into the sea -->
+  <path d="M83,140 C120,160 180,150 230,175 S320,190 380,185" fill="none" stroke="#E4572E" stroke-width="3"/>
+
+  <!-- sea -->
+  <rect x="0" y="170" width="400" height="50" fill="#0B1F3A"/>
+  <path d="M0,178 Q20,172 40,178 T80,178 T120,178 T160,178 T200,178 T240,178 T280,178 T320,178 T360,178 T400,178"
+        fill="none" stroke="#00C2CB" stroke-width="1.5" opacity="0.5"/>
+  <path d="M0,195 Q20,189 40,195 T80,195 T120,195 T160,195 T200,195 T240,195 T280,195 T320,195 T360,195 T400,195"
+        fill="none" stroke="#00C2CB" stroke-width="1.5" opacity="0.3"/>
+
+  <text x="200" y="20" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="12" letter-spacing="2" fill="#B9C7D6">FIBRE &amp; SUBMARINE CABLES</text>
+</svg>

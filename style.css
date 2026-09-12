@@ -1,0 +1,456 @@
+/* ============================================================
+   style.css — History of the Internet in Pakistan
+   Shared stylesheet for all 6 pages (Home/Timeline, Broadband,
+   Mobile Era, Censorship, Economy, References).
+   ============================================================ */
+
+/* Skip link: hidden off-screen by default, only becomes visible
+   when it receives keyboard focus (Tab key), so keyboard and
+   screen-reader users can jump straight past the nav without
+   affecting the visual layout for mouse/sighted users. */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  background: var(--cyan);
+  color: var(--navy);
+  font-weight: 700;
+  padding: 10px 16px;
+  z-index: 100;
+  border-radius: 0 0 6px 0;
+}
+
+.skip-link:focus {
+  left: 0;
+}
+
+:root {
+  --navy: #0B1F3A;
+  --teal: #1C7293;
+  --cyan: #00C2CB;
+  --orange: #E4572E;
+  --light: #F5F7FA;
+  --ink: #1A2B3C;
+  --muted: #5B6B7C;
+  --card: #FFFFFF;
+  --border: #E2E8F0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Calibri, Arial, sans-serif;
+  background: var(--light);
+  color: var(--ink);
+  line-height: 1.6;
+}
+
+/* ---------- Navigation ---------- */
+nav.site-nav {
+  background: var(--navy);
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  height: 60px;
+}
+
+nav.site-nav .logo {
+  color: #fff;
+  font-weight: 700;
+  font-size: 16px;
+  text-decoration: none;
+  margin-right: auto;
+}
+
+nav.site-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 24px;
+  margin: 0;
+  padding: 0;
+}
+
+nav.site-nav a {
+  color: #C9D4E0;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+nav.site-nav a:hover,
+nav.site-nav a.active {
+  color: var(--cyan);
+}
+
+/* Mobile nav toggle */
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+@media (max-width: 720px) {
+  nav.site-nav ul {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background: var(--navy);
+    flex-direction: column;
+    padding: 12px 24px 20px;
+    gap: 14px;
+  }
+  nav.site-nav ul.open {
+    display: flex;
+  }
+  .nav-toggle {
+    display: block;
+  }
+}
+
+/* ---------- Layout containers ---------- */
+main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 32px 24px 60px;
+}
+
+.page-header h1 {
+  font-size: 28px;
+  color: var(--navy);
+  margin: 0 0 8px;
+}
+
+.page-header .intro {
+  color: var(--muted);
+  font-size: 15.5px;
+  max-width: 700px;
+  margin: 0 0 28px;
+}
+
+.hero-image {
+  display: block;
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 28px;
+}
+
+/* ---------- Article page layout (Pages 2-5) ---------- */
+/* CSS Grid (rather than Flexbox) is used here because the two
+   columns need independent, fixed proportions (2fr main content
+   to 1fr sidebar) that don't depend on the content's own size -
+   exactly the kind of explicit track sizing Grid is for. */
+.article-layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 28px;
+}
+
+/* 800px breakpoint chosen because below this width a 1fr sidebar
+   column becomes too narrow (under ~250px) for the stats numbers
+   and mini-list dates to stay legible, so the layout collapses to
+   a single column instead of squeezing the sidebar further. */
+@media (max-width: 800px) {
+  .article-layout {
+    grid-template-columns: 1fr;
+  }
+  .sidebar {
+    order: -1; /* sidebar content moves above fact cards on mobile, per wireframes */
+  }
+}
+
+.fact-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 18px 20px;
+  margin-bottom: 16px;
+}
+
+.fact-card h2 {
+  margin: 0 0 8px;
+  font-size: 16px;
+  color: var(--navy);
+}
+
+.fact-card p {
+  margin: 0 0 8px;
+  font-size: 14.5px;
+  color: var(--ink);
+}
+
+.fact-card .source {
+  font-size: 12px;
+  color: var(--muted);
+  font-style: italic;
+}
+
+.sidebar .stats-box {
+  background: var(--navy);
+  color: #fff;
+  border-radius: 8px;
+  padding: 18px 20px;
+  margin-bottom: 16px;
+}
+
+.sidebar .stats-box h2 {
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--cyan);
+  margin: 0 0 12px;
+}
+
+.stat-item {
+  margin-bottom: 12px;
+}
+
+.stat-item .stat-value {
+  font-size: 22px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.stat-item .stat-desc {
+  font-size: 12.5px;
+  color: #B9C7D6;
+}
+
+.sidebar .mini-list {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 16px 18px;
+}
+
+.sidebar .mini-list h2 {
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--teal);
+  margin: 0 0 10px;
+}
+
+.mini-list-item {
+  font-size: 13px;
+  padding: 6px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.mini-list-item:last-child {
+  border-bottom: none;
+}
+
+.mini-list-item .year {
+  font-weight: 700;
+  color: var(--navy);
+  margin-right: 6px;
+}
+
+/* ---------- Timeline page (Page 1) ---------- */
+.timeline-wrap {
+  position: relative;
+  padding: 20px 0;
+}
+
+.timeline-track {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  padding-bottom: 12px;
+}
+
+.timeline-node {
+  flex: 0 0 220px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-top: 4px solid var(--cyan);
+  border-radius: 8px;
+  padding: 16px;
+}
+
+.timeline-node .era {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--teal);
+  font-weight: 700;
+}
+
+.timeline-node .year {
+  font-size: 13px;
+  color: var(--muted);
+  margin-bottom: 6px;
+}
+
+.timeline-node h2 {
+  font-size: 15px;
+  color: var(--navy);
+  margin: 0 0 8px;
+}
+
+.timeline-node p {
+  font-size: 12.5px;
+  color: var(--ink);
+  margin: 0;
+}
+
+@media (max-width: 720px) {
+  .timeline-track {
+    flex-direction: column;
+    overflow-x: visible;
+  }
+  .timeline-node {
+    flex: none;
+  }
+}
+
+/* ---------- Footer ---------- */
+footer.site-footer {
+  background: var(--navy);
+  color: #9FB3C8;
+  text-align: center;
+  padding: 24px;
+  font-size: 12.5px;
+  margin-top: 40px;
+}
+
+footer.site-footer a {
+  color: var(--cyan);
+}
+
+.ref-group {
+  margin-bottom: 28px;
+}
+
+.ref-group h2 {
+  font-size: 16px;
+  color: var(--navy);
+  border-bottom: 2px solid var(--border);
+  padding-bottom: 6px;
+  margin-bottom: 12px;
+}
+
+.ref-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.ref-list li {
+  font-size: 13.5px;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--border);
+  color: var(--ink);
+}
+
+.ref-list li:last-child {
+  border-bottom: none;
+}
+
+/* ---------- Report page (report.html) ---------- */
+.report-nav {
+  background: var(--navy);
+  padding: 14px 24px;
+}
+
+.report-nav a {
+  color: var(--cyan);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.report-section {
+  margin-bottom: 44px;
+}
+
+.report-section h2 {
+  font-size: 20px;
+  color: var(--navy);
+  border-bottom: 2px solid var(--border);
+  padding-bottom: 8px;
+  margin-bottom: 16px;
+}
+
+.report-section h3 {
+  font-size: 15px;
+  color: var(--teal);
+  margin: 20px 0 6px;
+}
+
+.report-section p,
+.report-section li {
+  font-size: 14.5px;
+  color: var(--ink);
+}
+
+.report-section ol,
+.report-section ul {
+  padding-left: 22px;
+}
+
+.report-figure {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 16px;
+  margin: 16px 0;
+  text-align: center;
+}
+
+.report-figure img,
+.report-figure svg {
+  max-width: 100%;
+  height: auto;
+}
+
+.report-figure figcaption {
+  font-size: 12.5px;
+  color: var(--muted);
+  margin-top: 8px;
+  font-style: italic;
+}
+
+.wireframe-placeholder {
+  border: 2px dashed var(--border);
+  border-radius: 8px;
+  padding: 40px 20px;
+  text-align: center;
+  color: var(--muted);
+  font-size: 13.5px;
+  background: var(--light);
+}
+
+.resource-list li {
+  margin-bottom: 6px;
+}
+
+.eval-good {
+  border-left: 4px solid var(--cyan);
+  padding-left: 14px;
+}
+
+.eval-improve {
+  border-left: 4px solid var(--orange);
+  padding-left: 14px;
+}
+.render-error {
+  color: var(--orange);
+  font-style: italic;
+}
+
+.loading-state {
+  color: var(--muted);
+  font-style: italic;
+  padding: 20px 0;
+}

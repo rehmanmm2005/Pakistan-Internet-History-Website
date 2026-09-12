@@ -1,0 +1,55 @@
+{
+  "pageTitle": "Mobile Internet Era",
+  "intro": "In 2014, Pakistan skipped straight past the mobile-broadband queue — here's how a single spectrum auction reshaped how the country goes online.",
+  "heroImageAlt": "Mobile telecom tower",
+  "heroImageSrc": "images/mobile-hero.svg",
+  "facts": [
+    {
+      "id": "fact-auction",
+      "heading": "The 2014 Spectrum Auction",
+      "detail": "Pakistan's first spectrum auction for mobile broadband raised $1.1 billion combined ($903 million from the 2100MHz band, $210 million from 1800MHz). Zong, Mobilink, Telenor, and Ufone won 3G licenses; Zong alone won 4G.",
+      "source": "Wikipedia — 2014 Pakistani Telecom Spectrum Auction"
+    },
+    {
+      "id": "fact-rollout",
+      "heading": "Rollout Obligations",
+      "detail": "Winning operators were required to bring 3G coverage to Islamabad, Karachi, Lahore, Peshawar, Quetta, and 10 more cities within 6 months, and to 80% of district headquarters within 18 months.",
+      "source": "ProPakistani — PTA Publishes IM: 3G/4G Auction"
+    },
+    {
+      "id": "fact-second-auction",
+      "heading": "A Second Round (2016)",
+      "detail": "A follow-up spectrum auction in 2016 saw Telenor secure an additional 4G license, further expanding network coverage.",
+      "source": "ResearchGate — Mobile Communication (2G, 3G & 4G) Review"
+    },
+    {
+      "id": "fact-5g",
+      "heading": "Looking to 5G",
+      "detail": "By early 2017, 3G/4G subscribers had reached 37 million. In 2019, Pakistan became the first South Asian country to test 5G mobile network services.",
+      "source": "ProPakistani — Launch of 3G/4G Services in Pakistan"
+    },
+    {
+      "id": "fact-jobs",
+      "heading": "Economic Ripple Effect",
+      "detail": "By 2023, an estimated 200,000 direct and indirect jobs had been created by the telecom sector as a result of network expansion since the 2014 auction.",
+      "source": "ProPakistani — Launch of 3G/4G Services Created 0.2 Million Jobs"
+    }
+  ],
+  "stats": {
+    "label": "Key Numbers",
+    "items": [
+      {
+        "value": "$1.1B",
+        "description": "raised in the 2014 spectrum auction"
+      },
+      {
+        "value": "37M",
+        "description": "3G/4G subscribers by early 2017"
+      },
+      {
+        "value": "200K",
+        "description": "jobs created by telecom sector growth"
+      }
+    ]
+  }
+}

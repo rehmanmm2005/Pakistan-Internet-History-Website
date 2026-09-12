@@ -1,0 +1,23 @@
+<div class="page-header">
+  <h1>{{ pageTitle }}</h1>
+  <p class="intro">{{ intro }}</p>
+</div>
+
+<img class="hero-image" src="{{ heroImageSrc }}" alt="{{ heroImageAlt }}">
+
+<div class="article-layout">
+  <section class="main-content" aria-label="Article content">
+    {{#each facts}}
+      <article class="fact-card">
+        <h2>{{ this.heading }}</h2>
+        <p>{{ this.detail }}</p>
+        {{#if this.source}}<p class="source">Source: {{ this.source }}</p>{{/if}}
+      </article>
+    {{/each}}
+  </section>
+
+  <aside class="sidebar" aria-label="Related statistics and timeline">
+    <div id="sidebarStats"></div>
+    <div id="sidebarMiniList"></div>
+  </aside>
+</div>

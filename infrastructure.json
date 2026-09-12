@@ -1,0 +1,72 @@
+{
+  "pageTitle": "Broadband & Infrastructure",
+  "intro": "From 56kbps dial-up to fiber-to-the-home — how Pakistan's physical internet backbone was built, and why it still occasionally falls over.",
+  "heroImageAlt": "Submarine cable and fiber infrastructure",
+  "heroImageSrc": "images/infrastructure-hero.svg",
+  "facts": [
+    {
+      "id": "fact-dialup",
+      "heading": "Dial-Up Beginnings (1992–1998)",
+      "detail": "Imran-Net launched Pakistan's first commercial dial-up service in 1992-93, alongside the UNDP-funded SDNPK project offering early email and newsgroup access. By 1998, speeds reached 56kbps and internet calls were exempted from multi-metering charges.",
+      "source": "Ispak — History of Internet in Pakistan"
+    },
+    {
+      "id": "fact-submarine",
+      "heading": "Pakistan's First Submarine Cable (2000)",
+      "detail": "PTCL brought the SEA-ME-WE-3 submarine cable system into the country in March 2000, introducing the broadband concept the same year. DSL broadband over PTCL's copper network followed in 2002.",
+      "source": "ProPakistani — The Conception and Evolution of Internet"
+    },
+    {
+      "id": "fact-deregulation",
+      "heading": "Market Opens Up (2004–2008)",
+      "detail": "The 2004 Telecom De-regulation Policy allowed private operators to offer FTTH, WiMAX, and cable services. PTCL's cable monopoly ended in 2008 when Transworld Associates brought an alternate international link online.",
+      "source": "Ispak — About Us; Dawn — Evolution of the Internet in Pakistan"
+    },
+    {
+      "id": "fact-fiber",
+      "heading": "The Fiber Era",
+      "detail": "Fiber-to-the-home adoption has surged in recent years, growing from under 70,000 subscribers in 2018 to roughly 2.6 million by early 2026.",
+      "source": "Wikipedia — Internet in Pakistan"
+    },
+    {
+      "id": "fact-outages",
+      "heading": "Infrastructure Is Still Fragile",
+      "detail": "Pakistan's reliance on a small number of submarine cables and PTCL's dominant share of national bandwidth (around 70%) means single points of failure still cause nationwide disruption — as seen in outages in August 2022, January 2025, and August 2025.",
+      "source": "Dawn — multiple 2022–2025 reports"
+    }
+  ],
+  "stats": {
+    "label": "Key Numbers",
+    "items": [
+      {
+        "value": "22M+",
+        "description": "internet users reported by PTA in 2008"
+      },
+      {
+        "value": "2.6M",
+        "description": "fiber broadband subscribers by early 2026"
+      },
+      {
+        "value": "~70%",
+        "description": "of national internet traffic carried via PTCL"
+      }
+    ]
+  },
+  "outageTimeline": [
+    {
+      "date": "August 2022",
+      "cause": "Optic fiber fault worsened by flooding",
+      "impact": "Blackouts in Islamabad and Lahore"
+    },
+    {
+      "date": "January 2025",
+      "cause": "AAE-1 submarine cable fault near Qatar",
+      "impact": "Nationwide slowdown for ~2 weeks"
+    },
+    {
+      "date": "August 2025",
+      "cause": "Heavy rainfall in Karachi",
+      "impact": "National connectivity dropped to 20% of normal"
+    }
+  ]
+}

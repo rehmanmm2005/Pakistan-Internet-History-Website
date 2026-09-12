@@ -1,0 +1,46 @@
+{
+  "pageTitle": "References & Sources",
+  "intro": "All facts and figures on this site are drawn from the sources below. Pakistani news outlets, civil-society reports, and international references are used together for a fuller picture.",
+  "groups": [
+    {
+      "groupName": "Pakistani News & Tech Outlets",
+      "sources": [
+        { "name": "Dawn.com", "detail": "\"Stormy weather disrupts internet nationwide\" (Aug 2025)" },
+        { "name": "Dawn.com", "detail": "\"Internet services fully operational after submarine cable's restoration: PTCL\" (Jan 2025)" },
+        { "name": "Dawn.com", "detail": "\"PTCL says internet services restored after technical fault in optic fiber network fixed\" (Aug 2022)" },
+        { "name": "Dawn.com", "detail": "\"The year they came for the internet\", Usama Khilji (Jan 2025)" },
+        { "name": "Dawn.com", "detail": "\"Digital rights report exposes Peca threats to press freedom\" (2025)" },
+        { "name": "ProPakistani", "detail": "\"The Conception and Evolution of Internet\"" },
+        { "name": "ProPakistani", "detail": "\"PTA Publishes IM: 3G/4G Auction in Pakistan on April 7th\" (2014)" },
+        { "name": "ProPakistani", "detail": "\"3G/4G Auction in Pakistan [Live Updates]\" (2014)" },
+        { "name": "ProPakistani", "detail": "\"Launch of 3G/4G Services in Pakistan Created 0.2 Million Jobs\" (2023)" },
+        { "name": "Express Tribune", "detail": "\"Freelancing: providing digital lifeline for Pakistan's economy\"" },
+        { "name": "Express Tribune", "detail": "\"IT boom: mirage or momentum?\"" },
+        { "name": "Express Tribune", "detail": "\"Freelancers fetch $856m in 9 months\"" },
+        { "name": "Express Tribune", "detail": "\"Time to focus on the 'net economy'\"" },
+        { "name": "TechJuice", "detail": "\"A brief look at Pakistan's decade long history of Social Media bans\"" },
+        { "name": "Ispak", "detail": "\"History of Internet in Pakistan\"" }
+      ]
+    },
+    {
+      "groupName": "Pakistani Civil-Society Sources",
+      "sources": [
+        { "name": "Digital Rights Foundation Pakistan", "detail": "Annual Report 2024" },
+        { "name": "Digital Rights Foundation Pakistan", "detail": "February 2025 bulletin (Balochistan shutdowns)" },
+        { "name": "Digital Rights Foundation Pakistan", "detail": "\"Bytes Behind Bars\" report (2025, via Dawn coverage)" }
+      ]
+    },
+    {
+      "groupName": "International & Reference Sources",
+      "sources": [
+        { "name": "Wikipedia", "detail": "\"Internet in Pakistan\"; \"PTCL\"; \"2014 Pakistani Telecom Spectrum Auction\"; \"Internet censorship in Pakistan\"; \"DigiSkills.pk\"" },
+        { "name": "Freedom House", "detail": "\"Freedom on the Net\" country reports for Pakistan (2018, 2022, 2023, 2024, 2025)" },
+        { "name": "OONI", "detail": "\"Internet Censorship in Pakistan: Findings from 2014-2017\"" },
+        { "name": "Al Jazeera", "detail": "\"Censorship fears persist as YouTube returns to Pakistan\"" },
+        { "name": "Digital Pakistan Policy", "detail": "Ministry of IT & Telecom (2018)" },
+        { "name": "Arab News", "detail": "\"Pakistan's freelance economy could top $1 billion annually\"" },
+        { "name": "TelecomLead", "detail": "\"Pakistan completes 3G, 4G spectrum auctions and mobilizes $1.1 billion\"" }
+      ]
+    }
+  ]
+}

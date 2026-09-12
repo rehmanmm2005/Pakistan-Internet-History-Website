@@ -1,0 +1,8 @@
+<div class="mini-list">
+  <h2>Recent Outages</h2>
+  {{#each items}}
+    <div class="mini-list-item">
+      <span class="year">{{ this.date }}</span>{{ this.cause }} — {{ this.impact }}
+    </div>
+  {{/each}}
+</div>

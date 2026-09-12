@@ -1,0 +1,9 @@
+<div class="stats-box">
+  <h2>{{ label }}</h2>
+  {{#each items}}
+    <div class="stat-item">
+      <div class="stat-value">{{ this.value }}</div>
+      <div class="stat-desc">{{ this.description }}</div>
+    </div>
+  {{/each}}
+</div>

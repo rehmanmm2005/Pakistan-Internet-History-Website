@@ -1,0 +1,90 @@
+{
+  "pageTitle": "Censorship & Social Media Bans",
+  "intro": "From a week-long Facebook ban in 2010 to a nationwide shutdown on election day 2024 — a look at how access has been switched on and off over 15 years.",
+  "heroImageAlt": "Regulatory authority building",
+  "heroImageSrc": "images/censorship-hero.svg",
+  "facts": [
+    {
+      "id": "fact-2010",
+      "heading": "The First Big Ban (2010)",
+      "detail": "Facebook, YouTube, Wikipedia, and Flickr were banned over a controversial page deemed blasphemous, with the ban lifted after roughly a week.",
+      "source": "TechJuice — Pakistan's decade-long history of Social Media bans"
+    },
+    {
+      "id": "fact-2012",
+      "heading": "Three Years Without YouTube",
+      "detail": "YouTube was blocked nationwide, alongside roughly 20,000 other websites, after the 'Innocence of Muslims' film sparked protests in September 2012. Access wasn't restored until January 2016, after Google launched a localized, filterable version.",
+      "source": "OONI; Al Jazeera"
+    },
+    {
+      "id": "fact-peca",
+      "heading": "PECA Becomes Law (2016)",
+      "detail": "The Prevention of Electronic Crimes Act gave the Pakistan Telecommunication Authority formal legal power under Section 37 to block and remove online content — a legal foundation still used today.",
+      "source": "Freedom House — Freedom on the Net 2022"
+    },
+    {
+      "id": "fact-2017",
+      "heading": "Protest-Triggered Blackout (2017)",
+      "detail": "In November 2017, YouTube, Twitter, and Facebook were suspended nationwide during protests over a change to a lawmakers' oath. A court later ruled a related mobile shutdown illegal.",
+      "source": "Freedom House — Freedom on the Net 2018"
+    },
+    {
+      "id": "fact-2020",
+      "heading": "TikTok Banned (2020)",
+      "detail": "TikTok was banned nationwide for 'immoral content' — part of a wider pattern of platform-specific restrictions distinct from broader network shutdowns.",
+      "source": "TechJuice"
+    },
+    {
+      "id": "fact-2024",
+      "heading": "Election Day Shutdown (2024)",
+      "detail": "On 8 February 2024, mobile internet and phone services were suspended nationwide on general election day itself. X (Twitter) was banned nine days later, with the government only publicly confirming the block in April, citing 'national security'.",
+      "source": "Digital Rights Foundation — Annual Report 2024; Dawn"
+    },
+    {
+      "id": "fact-firewall",
+      "heading": "A National Firewall?",
+      "detail": "Through mid-to-late 2024, reports emerged — later partly confirmed — of a national internet 'firewall' system being tested for traffic monitoring and content blocking, alongside a controversial (later rescinded) mandatory VPN registration proposal.",
+      "source": "Digital Rights Foundation — Annual Report 2024"
+    },
+    {
+      "id": "fact-cost",
+      "heading": "The Economic Cost",
+      "detail": "According to VPN-reviewer Top10VPN.com, Pakistan topped the world in financial losses from internet and social-media outages in 2024, with national internet speeds falling among the lowest 12% globally that year.",
+      "source": "Dawn — 'The year they came for the internet', Usama Khilji"
+    }
+  ],
+  "banTimeline": [
+    {
+      "year": "2010",
+      "event": "Facebook, YouTube, Wikipedia, Flickr banned (~1 week)"
+    },
+    {
+      "year": "2012–2016",
+      "event": "YouTube banned (~3+ years)"
+    },
+    {
+      "year": "2016",
+      "event": "PECA enacted"
+    },
+    {
+      "year": "2017",
+      "event": "YouTube, Twitter, Facebook suspended during protests"
+    },
+    {
+      "year": "2020",
+      "event": "TikTok banned"
+    },
+    {
+      "year": "2023",
+      "event": "Wikipedia banned (2 days); 4-day shutdown during protests"
+    },
+    {
+      "year": "2024",
+      "event": "Election-day shutdown; X banned"
+    },
+    {
+      "year": "2025",
+      "event": "PECA press-freedom concerns documented; X restrictions continue"
+    }
+  ]
+}

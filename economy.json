@@ -1,0 +1,67 @@
+{
+  "pageTitle": "Digital Economy & Freelancing",
+  "intro": "How broadband growth turned into a genuine export industry — Pakistan's freelancers now earn more foreign exchange than most people realise.",
+  "heroImageAlt": "Digital economy and remote work",
+  "heroImageSrc": "images/economy-hero.svg",
+  "facts": [
+    {
+      "id": "fact-broadband-growth",
+      "heading": "The Infrastructure Groundwork",
+      "detail": "Broadband subscribers grew from 3.7 million in 2013 to over 44.3 million by 2017 — the connectivity base that made a genuine digital economy possible.",
+      "source": "Digital Pakistan Policy, Ministry of IT & Telecom, 2018"
+    },
+    {
+      "id": "fact-policy",
+      "heading": "Digital Pakistan Policy (2018)",
+      "detail": "Government policy under Vision 2025 targets a $20 billion ICT industry by 2025, backing homegrown platforms and encouraging digital skills training nationwide.",
+      "source": "Express Tribune — Pakistan treads towards IT revolution"
+    },
+    {
+      "id": "fact-digiskills",
+      "heading": "Training a Freelance Workforce",
+      "detail": "DigiSkills.pk, a government-run digital skills programme, had trained over 1.28 million people in freelancing-related skills by August 2020.",
+      "source": "Wikipedia — DigiSkills.pk"
+    },
+    {
+      "id": "fact-exports",
+      "heading": "IT Exports Cross $3.2 Billion",
+      "detail": "In FY2023-24, IT and IT-enabled services exports crossed $3.2 billion — a year-on-year increase of over 20% — with government targets of $5 billion by 2026.",
+      "source": "Express Tribune — IT boom: mirage or momentum?"
+    },
+    {
+      "id": "fact-freelancers",
+      "heading": "A Top-5 Freelancing Market",
+      "detail": "Pakistan ranks among the world's top 5 freelancing markets, with over 2.3 million active freelancers and a workforce that grew roughly 70% between 2016 and 2024.",
+      "source": "Arab News; Express Tribune"
+    },
+    {
+      "id": "fact-women",
+      "heading": "A More Equal Playing Field",
+      "detail": "A 2019 Payoneer survey found Pakistani women freelancers earning slightly more per hour than men on average ($22/hr vs $20/hr) — an unusual pattern compared to most freelance markets globally.",
+      "source": "Express Tribune"
+    },
+    {
+      "id": "fact-risk",
+      "heading": "A Fragile Kind of Growth",
+      "detail": "Roughly two-thirds of Pakistan's freelance and IT export earnings come from North American clients — a concentration that leaves the sector exposed to global economic shifts, and to the same submarine-cable outages covered on the Infrastructure page.",
+      "source": "Express Tribune — IT boom: mirage or momentum?"
+    }
+  ],
+  "stats": {
+    "label": "Key Numbers",
+    "items": [
+      {
+        "value": "$3.2B",
+        "description": "IT/ITeS exports in FY2023-24"
+      },
+      {
+        "value": "2.3M+",
+        "description": "active freelancers in Pakistan"
+      },
+      {
+        "value": "Top 5",
+        "description": "global ranking among freelancing markets"
+      }
+    ]
+  }
+}

@@ -1,0 +1,40 @@
+<svg viewBox="0 0 400 220" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Mobile internet era</title>
+  <desc id="desc">Stylised illustration of a cell tower broadcasting signal to a smartphone.</desc>
+  <defs>
+    <linearGradient id="bgGrad2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1C7293"/>
+      <stop offset="100%" stop-color="#0B1F3A"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="220" fill="url(#bgGrad2)"/>
+
+  <!-- cell tower -->
+  <g transform="translate(90,50)">
+    <line x1="20" y1="0" x2="20" y2="110" stroke="#F5F7FA" stroke-width="3"/>
+    <line x1="0" y1="30" x2="40" y2="30" stroke="#F5F7FA" stroke-width="3"/>
+    <line x1="4" y1="55" x2="36" y2="55" stroke="#F5F7FA" stroke-width="3"/>
+    <line x1="0" y1="30" x2="20" y2="0" stroke="#F5F7FA" stroke-width="3"/>
+    <line x1="40" y1="30" x2="20" y2="0" stroke="#F5F7FA" stroke-width="3"/>
+    <line x1="4" y1="55" x2="20" y2="0" stroke="#F5F7FA" stroke-width="2" opacity="0.6"/>
+    <line x1="36" y1="55" x2="20" y2="0" stroke="#F5F7FA" stroke-width="2" opacity="0.6"/>
+    <!-- signal arcs -->
+    <path d="M20,-6 a30 30 0 0 1 30 18" stroke="#00C2CB" stroke-width="2" fill="none"/>
+    <path d="M20,-6 a48 48 0 0 1 48 28" stroke="#00C2CB" stroke-width="2" fill="none" opacity="0.6"/>
+    <path d="M20,-6 a20 20 0 0 0 -20 12" stroke="#00C2CB" stroke-width="2" fill="none"/>
+  </g>
+
+  <!-- smartphone -->
+  <g transform="translate(250,70)">
+    <rect x="0" y="0" width="52" height="90" rx="8" fill="#F5F7FA"/>
+    <rect x="5" y="10" width="42" height="65" fill="#0B1F3A"/>
+    <circle cx="26" cy="83" r="3" fill="#0B1F3A"/>
+    <!-- app grid on screen -->
+    <rect x="10" y="16" width="10" height="10" rx="2" fill="#00C2CB"/>
+    <rect x="24" y="16" width="10" height="10" rx="2" fill="#E4572E"/>
+    <rect x="10" y="30" width="10" height="10" rx="2" fill="#1C7293"/>
+    <rect x="24" y="30" width="10" height="10" rx="2" fill="#00C2CB"/>
+  </g>
+
+  <text x="200" y="25" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="12" letter-spacing="2" fill="#B9C7D6">3G &#8594; 4G &#8594; MOBILE-FIRST</text>
+</svg>

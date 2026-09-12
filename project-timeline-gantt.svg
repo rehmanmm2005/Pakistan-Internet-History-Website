@@ -1,0 +1,70 @@
+<svg viewBox="0 0 760 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="ganttTitle ganttDesc" font-family="Segoe UI, Arial, sans-serif">
+  <title id="ganttTitle">Project timeline (Gantt chart)</title>
+  <desc id="ganttDesc">Gantt chart showing seven project phases across the coursework timeline, from initial research and planning through to the final written report.</desc>
+
+  <rect width="760" height="320" fill="#FFFFFF"/>
+
+  <!-- Week grid (7 weeks) -->
+  <g stroke="#E2E8F0" stroke-width="1">
+    <line x1="180" y1="20" x2="180" y2="290"/>
+    <line x1="260" y1="20" x2="260" y2="290"/>
+    <line x1="340" y1="20" x2="340" y2="290"/>
+    <line x1="420" y1="20" x2="420" y2="290"/>
+    <line x1="500" y1="20" x2="500" y2="290"/>
+    <line x1="580" y1="20" x2="580" y2="290"/>
+    <line x1="660" y1="20" x2="660" y2="290"/>
+    <line x1="740" y1="20" x2="740" y2="290"/>
+  </g>
+
+  <!-- Week labels -->
+  <g font-size="11" fill="#5B6B7C" text-anchor="middle">
+    <text x="220" y="15">Wk 1</text>
+    <text x="300" y="15">Wk 2</text>
+    <text x="380" y="15">Wk 3</text>
+    <text x="460" y="15">Wk 4</text>
+    <text x="540" y="15">Wk 5</text>
+    <text x="620" y="15">Wk 6</text>
+    <text x="700" y="15">Wk 7</text>
+  </g>
+
+  <!-- Task rows -->
+  <!-- Row 1: Research & planning -->
+  <text x="10" y="40" font-size="12" fill="#1A2B3C">Research &amp; planning</text>
+  <rect x="180" y="28" width="160" height="16" rx="4" fill="#1C7293"/>
+
+  <!-- Row 2: Wireframes & Stage 2 feedback -->
+  <text x="10" y="75" font-size="12" fill="#1A2B3C">Wireframes &amp; feedback</text>
+  <rect x="260" y="63" width="80" height="16" rx="4" fill="#1C7293"/>
+
+  <!-- Row 3: Build core site -->
+  <text x="10" y="110" font-size="12" fill="#1A2B3C">Build core site (engine, data, JS)</text>
+  <rect x="260" y="98" width="240" height="16" rx="4" fill="#0B1F3A"/>
+
+  <!-- Row 4: Bug fixing & testing -->
+  <text x="10" y="145" font-size="12" fill="#1A2B3C">Bug fixing &amp; automated testing</text>
+  <rect x="420" y="133" width="160" height="16" rx="4" fill="#0B1F3A"/>
+
+  <!-- Row 5: Accessibility & media -->
+  <text x="10" y="180" font-size="12" fill="#1A2B3C">Accessibility fixes &amp; media</text>
+  <rect x="500" y="168" width="160" height="16" rx="4" fill="#00C2CB"/>
+
+  <!-- Row 6: HTML/CSS validation -->
+  <text x="10" y="215" font-size="12" fill="#1A2B3C">HTML/CSS validation audit</text>
+  <rect x="580" y="203" width="80" height="16" rx="4" fill="#00C2CB"/>
+
+  <!-- Row 7: Report writing -->
+  <text x="10" y="250" font-size="12" fill="#1A2B3C">Report writing &amp; final polish</text>
+  <rect x="580" y="238" width="160" height="16" rx="4" fill="#E4572E"/>
+
+  <!-- Legend -->
+  <g font-size="11" fill="#5B6B7C">
+    <rect x="10" y="270" width="12" height="12" fill="#1C7293"/>
+    <text x="26" y="280">Planning</text>
+    <rect x="110" y="270" width="12" height="12" fill="#0B1F3A"/>
+    <text x="126" y="280">Build &amp; test</text>
+    <rect x="230" y="270" width="12" height="12" fill="#00C2CB"/>
+    <text x="246" y="280">Polish &amp; validate</text>
+    <rect x="380" y="270" width="12" height="12" fill="#E4572E"/>
+    <text x="396" y="280">Reporting</text>
+  </g>
+</svg>

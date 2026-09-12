@@ -1,0 +1,17 @@
+<div class="page-header">
+  <h1>{{ pageTitle }}</h1>
+  <p class="intro">{{ intro }}</p>
+</div>
+
+<div class="references-groups">
+  {{#each groups}}
+    <section class="ref-group" aria-labelledby="ref-group-{{ @index }}">
+      <h2 id="ref-group-{{ @index }}">{{ this.groupName }}</h2>
+      <ul class="ref-list">
+        {{#each this.sources}}
+          <li><strong>{{ this.name }}</strong> — {{ this.detail }}</li>
+        {{/each}}
+      </ul>
+    </section>
+  {{/each}}
+</div>

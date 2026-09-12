@@ -1,0 +1,40 @@
+<svg viewBox="0 0 400 220" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Timeline of connectivity</title>
+  <desc id="desc">Stylised illustration of an old computer monitor connected across a timeline of network nodes leading to a modern signal icon.</desc>
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1C7293"/>
+      <stop offset="100%" stop-color="#0B1F3A"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="220" fill="url(#bgGrad)"/>
+
+  <!-- timeline baseline -->
+  <line x1="40" y1="170" x2="360" y2="170" stroke="#00C2CB" stroke-width="2" stroke-dasharray="4 5" opacity="0.6"/>
+
+  <!-- retro monitor -->
+  <g transform="translate(50,60)">
+    <rect x="0" y="0" width="70" height="55" rx="4" fill="#F5F7FA"/>
+    <rect x="6" y="6" width="58" height="38" rx="2" fill="#0B1F3A"/>
+    <rect x="20" y="55" width="30" height="8" fill="#C9D4E0"/>
+    <rect x="10" y="63" width="50" height="6" rx="2" fill="#F5F7FA"/>
+    <circle cx="35" cy="25" r="10" fill="none" stroke="#00C2CB" stroke-width="2"/>
+    <path d="M35 20 v10 M30 25 h10" stroke="#00C2CB" stroke-width="1.5"/>
+  </g>
+
+  <!-- network nodes along timeline -->
+  <circle cx="150" cy="170" r="5" fill="#F5F7FA"/>
+  <circle cx="220" cy="170" r="5" fill="#F5F7FA"/>
+  <circle cx="290" cy="170" r="5" fill="#00C2CB"/>
+
+  <!-- modern signal / smartphone icon -->
+  <g transform="translate(300,55)">
+    <rect x="0" y="0" width="34" height="58" rx="6" fill="#F5F7FA"/>
+    <rect x="4" y="8" width="26" height="42" fill="#0B1F3A"/>
+    <circle cx="17" cy="53" r="2" fill="#F5F7FA"/>
+    <path d="M17 20 a10 10 0 0 1 10 10" stroke="#00C2CB" stroke-width="2" fill="none"/>
+    <path d="M17 20 a16 16 0 0 1 16 16" stroke="#00C2CB" stroke-width="2" fill="none" opacity="0.6"/>
+  </g>
+
+  <text x="200" y="25" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="12" letter-spacing="2" fill="#B9C7D6">1990s &#8594; PRESENT</text>
+</svg>
