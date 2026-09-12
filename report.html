@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project Report — History of the Internet in Pakistan</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <nav class="report-nav">
+    <a href="index.html">&larr; Back to the site</a>
+  </nav>
+
+  <main id="main-content">
+    <div class="page-header">
+      <h1>Project Report</h1>
+      <p class="intro">History of the Internet in Pakistan — a reflective account of the design, build, and evaluation process behind this site, submitted alongside the working website for CM1040 Web Development, Coursework 2.</p>
+    </div>
+
+    <!-- ================= INTRODUCTION ================= -->
+    <section class="report-section" id="introduction" aria-labelledby="introduction-h">
+      <h2 id="introduction-h">Introduction</h2>
+      <p>
+        This site tells the story of how ordinary people in Pakistan got online, and how that access has
+        shaped — and been shaped by — infrastructure, mobile technology, government policy, and the economy,
+        from the country's first commercial dial-up service in the early 1990s through to the mobile-first,
+        freelance-driven internet of today. Rather than a single narrative thread, the story is deliberately
+        split across four distinct angles (physical infrastructure, mobile adoption, censorship and platform
+        bans, and the digital economy) so a reader can either follow the chronological timeline on the home
+        page or dive into whichever theme interests them most.
+      </p>
+      <p>
+        Structurally, the site is a small "magazine" with five content pages plus a references page, all
+        rendered from JSON data through a shared templating layer rather than as hand-written static HTML.
+        Every page follows the same pattern: a page script fetches and validates a JSON data file, then hands
+        the validated data to a template (compiled with Handlebars) which is injected into the page. This
+        keeps content and presentation separated — updating an article means editing a JSON file, not
+        touching any markup — and it means the same "fact card", "stats box", and "mini-list" components are
+        reused consistently across every article-style page instead of being duplicated per page.
+      </p>
+    </section>
+
+    <!-- ================= INSPIRATION ================= -->
+    <section class="report-section" id="inspiration" aria-labelledby="inspiration-h">
+      <h2 id="inspiration-h">Inspiration</h2>
+      <ol>
+        <li>
+          <strong>Data journalism sites (e.g. Reuters Graphics, Dawn's interactive features):</strong>
+          the idea of pairing a short, punchy "fact card" with a supporting stat in a sidebar — rather than
+          long unbroken paragraphs — came from how data journalism outlets present dense factual reporting in
+          scannable chunks.
+        </li>
+        <li>
+          <strong>CM1040's Topic 5 (Data Sources &amp; APIs) and Topic 6 (Templating) material:</strong>
+          the pattern of fetching JSON, validating it, and rendering it through a template rather than writing
+          content directly into HTML is a direct application of what the module covered on separating data
+          from presentation.
+        </li>
+        <li>
+          <strong>Government/NGO transparency dashboards:</strong> the stats-box and mini-list sidebar
+          components (recent outages, ban timelines) are modelled on how organisations like the Digital
+          Rights Foundation and Freedom House present timelines of restrictive actions — small, dated,
+          scannable entries rather than prose.
+        </li>
+      </ol>
+    </section>
+
+    <!-- ================= ACCESSIBILITY ================= -->
+    <section class="report-section" id="accessibility" aria-labelledby="accessibility-h">
+      <h2 id="accessibility-h">Accessibility</h2>
+      <ol>
+        <li>
+          <strong>Skip-to-content link:</strong> every page has a visually-hidden link, revealed on keyboard
+          focus, that lets keyboard and screen-reader users jump straight past the repeated navigation to the
+          page's main content instead of tabbing through five nav links on every single page load.
+        </li>
+        <li>
+          <strong><code>aria-current="page"</code> on the active nav link:</strong> the active page is shown
+          visually with a highlight colour, but that's a purely visual cue — a screen reader wouldn't announce
+          it. Adding <code>aria-current="page"</code> alongside the CSS class means assistive technology
+          announces which page the user is currently on.
+        </li>
+        <li>
+          <strong>Semantic structural elements and meaningful alt text:</strong> content is marked up with
+          <code>&lt;article&gt;</code> for each self-contained fact card and timeline entry, <code>&lt;aside&gt;</code>
+          for supplementary sidebar content, and <code>&lt;section&gt;</code> for grouped reference lists —
+          rather than generic <code>&lt;div&gt;</code>s everywhere — so a screen reader user gets a real
+          document outline to navigate by. Every illustration also has descriptive alt text (e.g. "Submarine
+          cable and fiber infrastructure") rather than a filename or generic label.
+        </li>
+      </ol>
+    </section>
+
+    <!-- ================= USABILITY ================= -->
+    <section class="report-section" id="usability" aria-labelledby="usability-h">
+      <h2 id="usability-h">Usability</h2>
+      <ol>
+        <li>
+          <strong>Consistent page anatomy:</strong> every article-style page follows the exact same layout —
+          hero image, intro, fact cards on the left, stats/mini-list on the right — so once a reader learns
+          the pattern on one page, every other page is immediately familiar.
+        </li>
+        <li>
+          <strong>Mobile-first collapsing layout:</strong> on narrow screens, the two-column article layout
+          becomes a single column with the sidebar content moved above the fact cards, so the "headline"
+          numbers and timeline aren't buried at the bottom of a long scroll on a phone.
+        </li>
+        <li>
+          <strong>Clear loading and error states:</strong> while JSON data is being fetched, the page shows a
+          "Loading…" message instead of a blank page, and if a fetch or validation step fails, the user sees a
+          plain-language error rather than a broken, half-rendered page.
+        </li>
+      </ol>
+    </section>
+
+    <!-- ================= LEARNING ================= -->
+    <section class="report-section" id="learning" aria-labelledby="learning-h">
+      <h2 id="learning-h">Learning</h2>
+      <ol>
+        <li>
+          <strong>Writing a hand-built JSON schema validator:</strong> I hadn't validated data shapes without
+          a library before. I learned this by building <code>jsonValidator.js</code> from scratch — a small
+          recursive checker that walks a schema definition and confirms required fields, types, and nested
+          array item shapes are all correct before any data reaches the template layer, so a malformed JSON
+          file fails loudly during development instead of silently breaking the page.
+        </li>
+        <li>
+          <strong>Composing partial templates safely with an async render pipeline:</strong> several pages
+          need to render a shared article template <em>and then</em> render a stats box or mini-list into a
+          container that only exists once the article template has finished rendering. I learned that
+          <code>await</code>ing each <code>renderTemplateIntoDOM</code> call in sequence guarantees the DOM is
+          updated before the next render call runs — I initially assumed this was a race condition risk and
+          had to actually trace through the async execution order to confirm it wasn't.
+        </li>
+        <li>
+          <strong>Testing rendered output, not just static markup:</strong> I learned that a standard HTML5
+          validator run against the raw HTML files only checks the empty page shells, since the real content
+          is injected by JavaScript at runtime. To properly check validity I had to render each page in a
+          headless browser environment (jsdom) with the actual JavaScript executing, capture the final DOM,
+          and validate <em>that</em> — which is a much stronger and more honest test than validating the
+          static source alone.
+        </li>
+      </ol>
+    </section>
+
+    <!-- ================= EVALUATION I ================= -->
+    <section class="report-section" id="evaluation-1" aria-labelledby="evaluation-1-h">
+      <h2 id="evaluation-1-h">Evaluation I — What worked well</h2>
+      <p class="eval-good">
+        The data/template separation is the strongest part of this project. Every article page is driven
+        entirely by a JSON file validated against a schema before rendering, which meant that once the
+        template and page script were written once, adding or editing content became a pure data-entry task
+        with no HTML to touch — and any malformed data is caught immediately with a clear console error rather
+        than producing a broken page. The reusable partial components (fact card, stats box, mini-list,
+        article layout) also meant visual consistency across five very differently-themed pages came for
+        free, rather than needing to be manually maintained page by page. Finally, verifying HTML5 validity
+        against the actual JavaScript-rendered DOM (not just the static shell) gives real confidence that the
+        site is genuinely well-formed, not just superficially clean.
+      </p>
+    </section>
+
+    <!-- ================= EVALUATION II ================= -->
+    <section class="report-section" id="evaluation-2" aria-labelledby="evaluation-2-h">
+      <h2 id="evaluation-2-h">Evaluation II — What could be improved</h2>
+      <p class="eval-improve">
+        The site currently uses original SVG illustrations rather than real photographs for its hero images.
+        Given more time, sourcing genuine archival photographs (submarine cable landing stations, early
+        Pakistani internet cafés, PTCL exchanges) with proper licensing and attribution would tell the story
+        more vividly than symbolic illustrations can. The wireframe feedback gathered at Stage 2 also came
+        from a single reviewer rather than a wider group, which is a known limitation — feedback from a more
+        diverse set of readers, particularly people less familiar with the subject matter, would likely have
+        surfaced navigation or clarity issues that a single knowledgeable reviewer wouldn't notice. Finally,
+        while the site is responsive across the breakpoints it was tested at, it hasn't been tested on a wide
+        range of real physical devices — only browser dev-tools emulation — so there may be device-specific
+        quirks (e.g. iOS Safari viewport units) that haven't surfaced yet.
+      </p>
+    </section>
+
+    <!-- ================= RESOURCES ================= -->
+    <section class="report-section" id="resources" aria-labelledby="resources-h">
+      <h2 id="resources-h">Resources</h2>
+
+      <h3>Libraries</h3>
+      <ul class="resource-list">
+        <li><strong>Handlebars.js v4.7.9</strong> — used for template compilation and rendering across all
+          pages (loaded via jsDelivr CDN, pinned to a specific version rather than <code>@latest</code> for
+          reproducibility). Approved for use in this coursework by the module teacher.</li>
+      </ul>
+
+      <h3>Original assets created for this project</h3>
+      <ul class="resource-list">
+        <li>All hero illustrations (<code>images/*.svg</code>) are original vector artwork created
+          specifically for this site — nothing was copied or adapted from an external source, so no
+          attribution is required. They're noted here for transparency about their origin.</li>
+        <li>The template engine wrapper (<code>templateEngine.js</code>), the JSON schema validator
+          (<code>jsonValidator.js</code>), and all page scripts, partials, and JSON data content were written
+          from scratch for this project.</li>
+      </ul>
+
+      <h3>Content sources</h3>
+      <ul class="resource-list">
+        <li>Dawn — reporting on the evolution of the internet in Pakistan and multiple 2022–2025 outage
+          reports</li>
+        <li>ProPakistani — reporting on submarine cable and broadband milestones</li>
+        <li>Ispak — historical account of Pakistan's first commercial dial-up services</li>
+        <li>Wikipedia — Internet in Pakistan (fibre subscriber statistics)</li>
+        <li>Digital Rights Foundation Pakistan &amp; Freedom House — reporting on internet censorship and
+          platform restrictions</li>
+        <li>See <a href="references.html">the References page</a> for the complete, page-by-page source list
+          with full citation detail for every fact used on the site.</li>
+      </ul>
+
+      <h3>Tools</h3>
+      <ul class="resource-list">
+        <li>VS Code with the Live Server extension, for local development and testing</li>
+        <li>jsdom (Node.js), for headless-browser integration testing of the rendered DOM</li>
+        <li>A standalone HTML5 validator, run against both the static page shells and the fully
+          JavaScript-rendered output</li>
+      </ul>
+    </section>
+
+    <!-- ================= APPENDICES ================= -->
+    <section class="report-section" id="appendices" aria-labelledby="appendices-h">
+      <h2 id="appendices-h">Appendices</h2>
+
+      <h3>Site map</h3>
+      <figure class="report-figure">
+        <img src="images/sitemap-diagram.svg" alt="Tree diagram showing the home page linking to five pages: Broadband and Infrastructure, Mobile Internet Era, Censorship and Social Media Bans, Digital Economy and Freelancing, and References">
+        <figcaption>The site's tree structure: one home/timeline page at the root, with five pages one level below it, all sharing the same nav and footer.</figcaption>
+      </figure>
+
+      <h3>Project timeline</h3>
+      <figure class="report-figure">
+        <img src="images/project-timeline-gantt.svg" alt="Gantt chart showing seven project phases across seven weeks, from research and planning through to the final written report">
+        <figcaption>Gantt chart of the project's phases, from initial research and planning through to this report. Week numbers are relative to the start of the coursework period.</figcaption>
+      </figure>
+
+      <h3>Wireframes</h3>
+      <p>Desktop (1280px+) and mobile (375px) wireframes for all 5 pages, produced at Stage 2. The shared
+        two-column article layout (fact cards + sidebar) was deliberately reused across the Infrastructure,
+        Mobile, Censorship, and Economy wireframes — a decision made at this stage specifically to set up
+        clean, reusable template code in Stage 3, rather than rebuilding a layout per page.</p>
+
+      <figure class="report-figure">
+        <img src="images/wireframe-home-timeline.jpg" alt="Desktop and mobile wireframe for the Home/Timeline page, showing a horizontal timeline collapsing to a vertical stack on mobile">
+        <figcaption>Page 1 — Home/Timeline. Unique layout: horizontal timeline (desktop) collapses to a vertical timeline (mobile).</figcaption>
+      </figure>
+      <figure class="report-figure">
+        <img src="images/wireframe-infrastructure.jpg" alt="Desktop and mobile wireframe for the Broadband and Infrastructure page">
+        <figcaption>Page 2 — Broadband &amp; Infrastructure. Establishes the shared article-page template.</figcaption>
+      </figure>
+      <figure class="report-figure">
+        <img src="images/wireframe-mobile.jpg" alt="Desktop and mobile wireframe for the Mobile Internet Era page">
+        <figcaption>Page 3 — Mobile Internet Era. Reuses the Page 2 template.</figcaption>
+      </figure>
+      <figure class="report-figure">
+        <img src="images/wireframe-censorship.jpg" alt="Desktop and mobile wireframe for the Censorship and Social Media Bans page">
+        <figcaption>Page 4 — Censorship &amp; Social Media Bans. Sidebar becomes a ban-timeline mini-list; on mobile it moves above the fact cards since it's content-heavy.</figcaption>
+      </figure>
+      <figure class="report-figure">
+        <img src="images/wireframe-economy.jpg" alt="Desktop and mobile wireframe for the Digital Economy and Freelancing page">
+        <figcaption>Page 5 — Digital Economy &amp; Freelancing. Sidebar returns to a stats-box format.</figcaption>
+      </figure>
+
+      <h3>Mockups</h3>
+      <div class="wireframe-placeholder">
+        High-fidelity visual mockups were not produced as a separate step — the wireframes above were taken
+        directly into implementation, with visual design decisions (colour, typography) made and iterated on
+        in CSS during Stage 3 rather than in a separate mockup tool.
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>History of the Internet in Pakistan (2000s–Present)</p>
+  </footer>
+
+</body>
+</html>
